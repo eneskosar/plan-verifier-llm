@@ -2,7 +2,9 @@
 
 Official implementation accompanying the paper:
 
-> **Plan Verification in Natural Language: A Logical Reasoning Approach to Training Large Language Models**
+> **Plan Verification in Natural Language:
+A Logical Reasoning Framework for Large
+Language Models**
 
 ## Overview
 
