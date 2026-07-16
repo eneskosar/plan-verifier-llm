@@ -8,15 +8,15 @@ Language Models**
 
 ## Overview
 
-This repository contains the code used in the paper above for training and evaluating large language models on **plan verification in natural language**.
+This repository contains the implementation accompanying the paper:
 
-The proposed framework decomposes plan verification into three components:
+> **Plan Verification in Natural Language: A Logical Reasoning Framework for Large Language Models**
 
-- **Action Verifier:** a large language model that determines whether an action is executable in the current state.
-- **State Updater:** a rule-based module generated from the planning domain that updates the current state after each executable action.
-- **Goal Checker:** a rule-based module generated from the planning domain that determines whether the final state satisfies the goal conditions.
+The paper investigates whether large language models (LLMs) can acquire **plan verification capability in natural language** and, if so, what training signal enables this capability. Instead of treating plan verification as a monolithic classification problem, we show that the action executability checks underlying plan verification can be formulated as **logical reasoning problems**. This provides a principled and domain-independent training signal for learning plan verification.
 
-The key idea is to formulate **action verification as a logical reasoning task**. Rather than relying solely on domain-specific planning examples, the Action Verifier is trained using logical reasoning supervision together with a small number of domain-specific action verification examples.
+Based on this formulation, we employ a **stepwise verification framework** that verifies plans by checking one action at a time. During inference, the Action Verifier LLM determines whether each action is executable in the current state, while state tracking and goal checking are performed by LLM-generated rule-based modules.
+
+This repository contains the Google Colab notebooks used for data preparation, model training, evaluation, result aggregation, and failure analysis reported in the paper.
 
 ---
 
